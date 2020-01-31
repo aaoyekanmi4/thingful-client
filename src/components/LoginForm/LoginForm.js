@@ -16,7 +16,7 @@ export default class LoginForm extends Component {
     console.log('login form submitted')
     console.log({ user_name, password })
     TokenService.saveAuthToken(
-      TokenService.makeBasicAuthToken(user_name, password)
+      TokenService.makeBasicAuthToken(user_name.value, password.value)
     );
     user_name.value = ''
     password.value = ''
